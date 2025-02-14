@@ -7,7 +7,7 @@ const app = express();
 // Middleware
 app.use(cors(
     {
-        origin:["https://SmartScript-Manthan-Gohil.vercel.app"],
+        origin:["https://smartscript-manthan-gohil.vercel.app"],
         methods: ["POST","GET"],
         credentials: true
     }
