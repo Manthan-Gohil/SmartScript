@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AnimatedText from './components/AnimatedText';
-
+import { baseUrl } from './Url';
 function App() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -10,7 +10,7 @@ function App() {
   const handleGenerate = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('http://localhost:5000/api/articles/generate', {
+      const response = await fetch(`${baseUrl}/api/articles/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title }),
@@ -28,7 +28,7 @@ function App() {
     try {
       setFade(true); // Trigger erasing animation
       setIsLoading(true);
-      const response = await fetch('http://localhost:5000/api/articles/optimize', {
+      const response = await fetch(`${baseUrl}/api/articles/optimize`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, content }),
