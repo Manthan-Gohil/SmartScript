@@ -1,0 +1,31 @@
+@import "tailwindcss";
+/* Eraser and fade-out animation */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 1s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in forwards;
+}
