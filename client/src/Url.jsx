@@ -1,1 +1,1 @@
-export const baseUrl = `https://smart-script-backend-2.onrender.com` 
+export const baseUrl = `https://smart-script-backend-4.onrender.com` 
