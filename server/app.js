@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/api/articles', articleRoutes);
 
 app.get('/',(req,res)=>{
-    res.send("Server is running")
+    res.json("Server is running")
     
 })
 
